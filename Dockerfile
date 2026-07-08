@@ -10,5 +10,5 @@ WORKDIR /app
 # Copiamos solo el JAR generado en la etapa anterior
 COPY --from=build /app/target/*.jar app.jar
 
-EXPOSE 8082
-ENTRYPOINT ["java", "-Dspring.profiles.active=docker", "-jar", "app.jar"]
+EXPOSE 8081
+ENTRYPOINT ["java", "-jar", "app.jar"]
